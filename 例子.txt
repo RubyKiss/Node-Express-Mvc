@@ -1,0 +1,27 @@
+
+// //获取post的数据
+// express.post('/app/index/saveData',function(req,res){
+//     var posted=req.body; //获取post过来的数据，必须使用body-parser
+// });
+
+// //获取get的数据
+// express.get('/app/index/saveData2',function(req,res){
+//     var posted=req.query; //获取get的数据
+// });
+
+// //文件上传
+// express.post('/upload',upload.single('f'),function(req,res){
+//     var file=req.file; //获取文件  具体请看multer的用法
+// });
+
+
+开发只需要修改router.js的路由和模块里面的MVC文件夹即可
+
+config配置文件
+mvc框架结构文件，根据需求可以更改
+server.js全局进程入口
+
+
+工作原理：
+    router负责将操作转向那个模块
+    router进入某个位置然后进行MVC框架的操作，期间require会自动缓存数据从而减少对文件的访问，所以调试只能每次重启服务
